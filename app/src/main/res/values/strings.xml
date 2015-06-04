@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Mansa Devi</string>
+    <string name="title_Home">Home</string>
+    <string name="title_Travel">Travel</string>
+    <string name="title_Temples">Temple</string>
+    <string name="title_Accomodation">Accomodation</string>
+    <string name="title_Welfare_Schemes">Welfare Scheme</string>
+    <string name="title_Constitution_Board">Constitution Board</string>
+    <string name="title_facilities">Facilities</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_example">Example action</string>
+    <string name="action_settings">Settings</string>
+    <string name="map_debug_key">AIzaSyCKa9wHaJNdCxEoM1tD5jnTC3zuRgJIZGM</string>
+
+</resources>

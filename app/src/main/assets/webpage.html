@@ -1,0 +1,82 @@
+<html>
+<head>
+<title>Mansa_Devi_App</title>
+<style>
+#view
+{
+  width : 100%;
+  height : 100%;
+  background-image : url(banner.jpg);
+  background-size : 100% 100%;
+  margin : 0px;
+  padding: 0px;
+  border-width: 0px;
+}
+#bell1
+{
+  position : absolute;
+  width : 15%;
+  height : 50%;
+  left : 18%;
+  top : -2%;
+}
+#bell2
+{
+  position : absolute;
+  width : 10%;
+  height : 30%;
+  left : 35%;
+  top : -2%;
+}
+#bell3
+{
+  position : absolute;
+  width : 10%;
+  height : 30%;
+  right : 35%;
+  top : -2%;
+}
+#bell4
+{
+  position : absolute;
+  width : 15%;
+  height : 50%;
+  right : 18%;
+  top : -2%;
+}
+</style>
+<script>
+var belli=[0,0,0,0],bella=[1,1,1,1],bells= [false,false,false,false],bellsnd=[false,false,false,false];
+function rotate()
+{
+   for(var j=0;j<4;j++)
+   {
+   if(belli[j]>=10)
+   {
+      bella[j]=-1;
+      }
+   if(belli[j]<=-10)
+   {
+      bella[j]=1;
+      }
+   }
+   for(var j=0;j<4;j++){
+   if(bells[j]==true){
+   document.getElementById("bell"+(j+1)).style.transformOrigin = "50% 0%";
+   document.getElementById("bell"+(j+1)).style.transform = "rotate("+belli[j]+"deg)";
+   }}
+   for(var j=0;j<4;j++)
+   if(bells[j]==true)
+      belli[j]+=bella[j];
+}
+</script>
+</head>
+<body onLoad="setInterval(function(){rotate(); }, 100);">
+<div id="view">
+<img src="bell.png" id="bell1" ontouchstart="bells[0]=true;bellssnd[0]=true">
+<img src="bell.png" id="bell2" ontouchstart="bells[1]=true;bellssnd[1]=true">
+<img src="bell.png" id="bell3" ontouchstart="bells[2]=true;bellssnd[2]=true">
+<img src="bell.png" id="bell4" ontouchstart="bells[3]=true;bellssnd[3]=true">
+</div>
+</body>
+</html>

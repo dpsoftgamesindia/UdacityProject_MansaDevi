@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="50sp"
+                    android:background="@android:color/darker_gray"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10sp"
+                    android:text="DARSHAN"
+                    android:textSize="18sp" />
+
+                <WebView
+                    android:id="@+id/wvFacility1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:hardwareAccelerated="true" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="50sp"
+                    android:background="@android:color/darker_gray"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10sp"
+                    android:text="BHANDARA"
+                    android:textSize="18sp" />
+
+                <WebView
+                    android:id="@+id/wvFacility2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:hardwareAccelerated="true" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="50sp"
+                    android:background="@android:color/darker_gray"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10sp"
+                    android:text="MEDICAL FACILITY"
+                    android:textSize="18sp" />
+
+                <WebView
+                    android:id="@+id/wvFacility3"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:hardwareAccelerated="true" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="50sp"
+                    android:background="@android:color/darker_gray"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10sp"
+                    android:text="POLICE"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:padding="10sp"
+                    android:text="There is a police post in the Mansa Devi complex, where any Yatri having a complaint can contact. The following are the phone numbers of police stations // police posts.\n\nPolice Post, Mansa Devi Complex\nTel: 6532967\nPolice control room\nTel: 2582100, 100\n\nThe following senior officers stationed at Panchkula can also be contacted in case of a need: -\nSuperintendent of Police Panchkula:\nTel: 2567101\nDeputy  Superintendent of Police Panchkula\nTel: 2570689"
+                    android:textColor="#000000"
+                    android:textIsSelectable="true"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="50sp"
+                    android:background="@android:color/darker_gray"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10sp"
+                    android:text="BANKS"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:padding="10sp"
+                    android:text="The Punjab National Bank has its extension counter at the Shrine Complex itself. However at these bank branches the facility of credit cards and traveller&apos;s cheque is not available.\nTelephone: 2556804"
+                    android:textColor="#000000"
+                    android:textIsSelectable="true"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="50sp"
+                    android:background="@android:color/darker_gray"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10sp"
+                    android:text="RAILWAY RESERVATION COUNTERS"
+                    android:textSize="18sp" />
+
+                <WebView
+                    android:id="@+id/wvFacility4"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:hardwareAccelerated="true" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
