@@ -1,6 +1,7 @@
 package fragments;
 
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -37,10 +38,14 @@ public class FacilitiesFragment extends Fragment {
 				+ "</p></body></html>";
 		String txt4 = "<html><body><p align=\"justify\">" + text4
 				+ "</p></body></html>";
+		ProgressDialog pDialog = new ProgressDialog(getActivity());
+		pDialog.setMessage("Please Wait...");
+		pDialog.show();
 		wv1.loadData(txt1, "text/html", "utf-8");
 		wv2.loadData(txt2, "text/html", "utf-8");
 		wv3.loadData(txt3, "text/html", "utf-8");
 		wv4.loadData(txt4, "text/html", "utf-8");
+		pDialog.cancel();
 		return v;
 	}
 

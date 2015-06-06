@@ -1,6 +1,7 @@
 package fragments;
 
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -24,7 +25,11 @@ public class WelfareSchemesFragment extends Fragment {
 		String txt = "<html><body><p align=\"justify\">" + text
 				+ "</p></body></html>";
 		wv = (WebView) v.findViewById(R.id.wvWelfareText);
+		ProgressDialog pDialog = new ProgressDialog(getActivity());
+		pDialog.setMessage("Please Wait...");
+		pDialog.show();
 		wv.loadData(txt, "text/html", "utf-8");
+		pDialog.cancel();
 		return v;
 	}
 

@@ -354,7 +354,13 @@ public class TravelFragment extends Fragment implements LocationListener {
 			}
 
 			// Drawing polyline in the Google Map for the i-th route
-			map.addPolyline(lineOptions);
+			if(lineOptions != null) {
+				try {
+					map.addPolyline(lineOptions);
+				}catch(Exception e){
+					e.printStackTrace();
+				}
+			}
 		}
 	}
 

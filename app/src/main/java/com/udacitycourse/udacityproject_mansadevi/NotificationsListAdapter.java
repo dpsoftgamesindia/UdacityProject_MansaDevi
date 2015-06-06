@@ -22,13 +22,31 @@ public class NotificationsListAdapter extends BaseAdapter {
 	Context context;
 	LayoutInflater inflater;
 
+	RelativeLayout.LayoutParams params;
+
 	public NotificationsListAdapter(Context context, ArrayList<String> msg,
-			ArrayList<String> dates) {
+									ArrayList<String> dates) {
 		this.context = context;
 		this.msg = msg;
 		this.dates = dates;
 		inflater = (LayoutInflater) context
 				.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+
+		Display display;
+		Point size;
+		int width;
+		display = ((ActionBarActivity) context).getWindowManager()
+				.getDefaultDisplay();
+		if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.HONEYCOMB_MR2) {
+			size = new Point();
+			display.getSize(size);
+			width = size.x;
+		} else {
+			width = display.getWidth();
+		}
+
+		params = new RelativeLayout.LayoutParams(
+				width, width);
 	}
 
 	@Override
@@ -46,42 +64,33 @@ public class NotificationsListAdapter extends BaseAdapter {
 		return 0;
 	}
 
+	class ViewHolder{
+		WebView wv;
+		TextView tvMsg, tvDate;
+	}
+
 	@SuppressLint("NewApi")
 	@Override
 	public View getView(int position, View convertView, ViewGroup parent) {
 		View v;
+		ViewHolder vh = new ViewHolder();
 		if (position == 0) {
 			v = inflater.inflate(R.layout.webview_mata, null);
-			Display display;
-			Point size;
-			int width;
-			display = ((ActionBarActivity) context).getWindowManager()
-					.getDefaultDisplay();
-			if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.HONEYCOMB_MR2) {
-				size = new Point();
-				display.getSize(size);
-				width = size.x;
-			} else {
-				width = display.getWidth();
-			}
-
-			RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(
-					width, width);
 			params.leftMargin = -8;
 			params.topMargin = -8;
 			params.rightMargin = -8;
 			params.bottomMargin = -8;
-			WebView wv = (WebView) v.findViewById(R.id.wvHome);
-			wv.loadUrl("file:///android_asset/webpage.html");
-			wv.getSettings().setJavaScriptEnabled(true);
-			wv.setLayoutParams(params);
+			vh.wv = (WebView) v.findViewById(R.id.wvHome);
+			vh.wv.loadUrl("file:///android_asset/webpage.html");
+			vh.wv.getSettings().setJavaScriptEnabled(true);
+			vh.wv.setLayoutParams(params);
 		} else {
 			v = inflater.inflate(R.layout.notification_list_item, null);
-			TextView tvMsg = (TextView) v.findViewById(R.id.tvShowNotif);
-			TextView tvDate = (TextView) v.findViewById(R.id.tvShowDate);
+			vh.tvMsg = (TextView) v.findViewById(R.id.tvShowNotif);
+			vh.tvDate = (TextView) v.findViewById(R.id.tvShowDate);
 
-			tvMsg.setText(msg.get(msg.size() - position));
-			tvDate.setText(dates.get(dates.size() - position));
+			vh.tvMsg.setText(msg.get(msg.size() - position));
+			vh.tvDate.setText(dates.get(dates.size() - position));
 		}
 		return v;
 	}
